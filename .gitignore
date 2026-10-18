@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+*.pyc
+__pycache__/
+# üçüncü taraf ham kaynaklar (WFG sayfaları, SymbTr dosyaları) depoya girmez
+docs/ham/

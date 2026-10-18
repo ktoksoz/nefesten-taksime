@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nefesten Taksime</title>
+<meta name="author" content="Koray Toksöz">
+<meta name="description" content="Türk müziğinde Sol klarnet: ilk sesten parmak pozisyonlarına, koma perdelerinden makamlara, usullerden taksime. Her slaytta çalınabilen bir klarnet, mikrofonlu koma akort aleti ve usul metronomu.">
+<meta name="theme-color" content="#231a1e">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nefesten Taksime">
+<meta property="og:title" content="Nefesten Taksime: Türk müziğinde Sol klarnet">
+<meta property="og:description" content="Etkileşimli Türkçe klarnet eğitimi: fiziksel modelle çalan bir klarnet, parmak tablosu, koma akort aleti, usul metronomu ve mikrofonla adım adım öğrenilen bir şarkı. Hazırlayan: Koray Toksöz.">
+<meta property="og:url" content="https://egitim.koraytoksoz.com/klarnet/">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300..700&family=Gloock&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=202610181200">
+<link rel="stylesheet" href="css/demos.css?v=202610181200">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23231a1e' stroke='%23c9ced6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ebb84c'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<main id="deck">
+
+<!-- ================= 0. GİRİŞ ================= -->
+<section class="slide cover" data-chapter="0" data-demo="kapak" data-title="Kapak" id="kapak">
+  <div class="stage bare"></div>
+  <div class="cover-text">
+    <h1>Nefesten<br>taksime</h1>
+    <p class="alt">Türk müziğinde Sol klarnet</p>
+    <p>Bir kamış, bir boru ve on üç anahtar. Klarnetin ilk sesinden parmak pozisyonlarına, koma perdelerinden makamlara ve usullere, oradan bir şarkıya ve taksime uzanan bir yol. Her slaytta çalınabilen bir klarnet var.</p>
+    <p class="byline">Koray Toksöz</p>
+    <div class="cover-actions">
+      <button class="btn primary big" type="button" onclick="Narrator.start()">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Sesli anlatımla başla
+      </button>
+      <button class="btn big ghost" type="button" onclick="Snd.unlock(); Deck.next()">Kendi hızımda gez</button>
+    </div>
+    <p class="hint">Plağın oluklarına dokunun: her oluk bir perdeyi çalar. Klarnet çizimindeki ağızlığı basılı tutunca klarnet üflenir. Anlatımlı tur yaklaşık 25 dakika sürer; istediğiniz an durup deneylerle oynayabilirsiniz. Kendi hızınızda gezerken <kbd>→</kbd> ile ilerleyin.</p>
+    <div class="cover-meta">
+      <a class="all-link" href="https://egitim.koraytoksoz.com/">← Bütün eğitimler</a>
+      <a class="gh-link" href="https://github.com/ktoksoz/nefesten-taksime" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Kaynak kodu GitHub'da</span></a>
+      <a class="lic" href="https://creativecommons.org/licenses/by/4.0/deed.tr" target="_blank" rel="license noopener" title="İçerik: Creative Commons Atıf 4.0">
+        <img src="img/cc-cc.svg" alt="Creative Commons" width="20" height="20"><img src="img/cc-by.svg" alt="Atıf" width="20" height="20">
+        <span>İçerik CC BY 4.0 · Kod MIT</span>
+      </a>
+    </div>
+  </div>
+  <aside class="notes"><ul>
+    <li>Plağın çevresindeki 53 çentik, oktavın 53 komasıdır. Adı yazılı çentikler Rast'tan Gerdâniye'ye uzanan ana perdelerdir.</li>
+    <li>"Dinle" düğmesi bu site için yazılmış kısa bir Uşşak cümlesi çalar. Klarnet sesi kayıt değil: tarayıcıda çalışan bir fiziksel modelden geliyor (2. bölüm).</li>
+    <li>Yol haritası: tarih → ses fiziği → çalgı → ilk ses → parmaklar → koma perdeleri → makamlar → usuller → bir şarkı → süslemeler ve taksim → bakım ve pratik.</li>
+    <li>Kısayollar: N notlar, T metni gizle, O tüm slaytlar, F tam ekran, M sesi kapat, A sesli anlatım, G deney gösterimleri.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: her slaytın notunda; tam liste README.md dosyasında. Perde adları ve komaları: Can (2002), TDV İslâm Ansiklopedisi.</p></aside>
+</section>
+
+<!-- ================= 1. KLARNET VE TÜRK MÜZİĞİ ================= -->
+<section class="slide" data-chapter="1" data-demo="tarihce" id="hikaye">
+  <div class="text">
+    <h2>Chalumeau'dan Sol klarnete</h2>
+    <p class="lead">Klarnet, Barok dönemin tek kamışlı küçük bir çalgısından doğdu. Nürnbergli çalgı yapımcısı Johann Christoph <strong>Denner</strong>, 1700 civarında bu çalgıya bir <strong>register anahtarı</strong> ekledi ve sesi bir onikili yukarı taşıyabilen yeni bir çalgı ortaya çıktı.</p>
+    <p>19. yüzyılda anahtarlar çoğaldı. Iwan <strong>Müller</strong>'in 13 anahtarlı klarnetine halkalar eklenerek Albert sistemi oluştu; aynı yıllarda Paris'te Boehm sistemi geliştirildi.</p>
+    <p>Osmanlı'da klarnet, 1826'da Yeniçeri Ocağı kaldırıldıktan sonra kurulan <strong>Mızıka-i Hümâyun</strong> ile, yani Batı tarzı saray bandosuyla geldi. Kısa sürede bandonun dışına taştı: fasıllara, plaklara, radyoya ve düğünlere.</p>
+    <p class="try">Zaman çizelgesindeki duraklara dokunun. Chalumeau'nun tek registeri ile klarnetin onikili sıçramasını dinleyin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Denner (1655–1707) ve register anahtarı: klarneti onun geliştirdiğini söyleyen en eski kaynak Doppelmayr'ın 1730 tarihli kitabıdır. "Clarinet" adını taşıyan en eski belge, oğlu Jacob Denner'in 1710 tarihli bir faturasıdır.</li>
+    <li>Müller 13 anahtarlı klarneti 1812 civarında geliştirdi. Albert sistemi 1840'larda, Müller'in klarnetine Adolphe Sax'ın halkaları eklenerek oluştu. Boehm sistemi Klosé ve Buffet'nin 1839–1843 arasındaki çalışmasıdır.</li>
+    <li>1826'da Yeniçeri Ocağı kaldırıldı, yerine Mızıka-i Hümâyun kuruldu; Giuseppe Donizetti 17 Eylül 1828'de bandonun başına geçti. Kurtaslan ve Üstündağ'a göre klarnet bandoya İtalyan "Tüysüz" Francesco aracılığıyla girdi; klarnetle Türk müziği çalan ilk isim olarak İbrahim Efendi anılır.</li>
+    <li>Deneyde "chalumeau" sesi aynı fiziksel modelin register anahtarı olmadan çalınmasıdır; gerçek bir chalumeau kaydı değildir.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wikipedia, "Clarinet", "Chalumeau", "Johann Christoph Denner", "Albert system", "Boehm system (clarinet)"; Hoeprich, <em>The Clarinet</em> (Yale UP, 2008); TDV İslâm Ansiklopedisi, "Mızıka-i Hümâyun"; Üstündağ ve Kurtaslan, Korkut Ata Türkiyat Araştırmaları Dergisi 15 (2024), 1362–1378.</p></aside>
+</section>
+
+<section class="slide" data-chapter="1" data-demo="ikidunya" id="turk-muziginde">
+  <div class="text">
+    <h2>Fasıldan düğüne</h2>
+    <p class="lead">Türkiye'de klarnet iki dünyada birden yaşar. Bir yanda şarkı ve fasıl eşliği: ağır usuller, uzun sesler, makamın inceliği. Öbür yanda düğün ve oyun havaları: hızlı aksak usuller, parlak ses, coşku.</p>
+    <p>Bu iki dünya birbirinden kopuk değil. Malatya'daki bir saha çalışması, düğünlerde çalan Roman müzisyenlerin oyun havalarının yanında sanat müziği eserlerini de çaldığını anlatır. Bir düğünde aynı klarnetçinin hem bir şarkıya eşlik etmesi hem bir oyun havası çalması bu yüzden şaşırtıcı değildir.</p>
+    <p>Türkiye'de bu müziklerde en çok <strong>Sol klarnet</strong> kullanılır. Batı müziğindeki Si♭ klarnetten daha uzun ve daha pestir; nedenini ve nasıl okunduğunu 3. ve 5. bölümlerde göreceğiz.</p>
+    <p class="try">Aynı makamda iki cümle dinleyin: biri sofyan usulünde bir şarkı havası, öbürü 9/8'lik bir oyun havası.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Düğünlerde hem oyun havası hem sanat müziği: Kılınçer ve Mustan Dönmez'in Malatya'daki Roman müzisyenlerle yaptığı saha çalışması. Bu bulgu bir bölge için geçerlidir; genelleştirmeyelim.</li>
+    <li>Sol klarnetin Türk müziğinde yaygınlığı: Kılıç 2023; Üstündağ ve Kurtaslan 2024; Estrin 2021.</li>
+    <li>İki cümle de bu site için yazıldı, geleneksel eserlerden alıntı değildir. Bölgesel üslup farklarını karşılaştıran akademik bir çalışma bulamadık; bu yüzden burada üslup genellemesi yapmıyoruz.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Kılınçer ve Mustan Dönmez (2013), Malatya Roman müzisyenleri saha çalışması, <a href="https://dergipark.org.tr/tr/download/article-file/255448">DergiPark</a>; Kılıç (2023), Sanat ve Tasarım Dergisi 13(2), 608–619, <a href="https://dergipark.org.tr/tr/download/article-file/3595532">DergiPark</a>; Estrin, "The Turkish Clarinet" (D'Addario, 2021), <a href="https://www.dansr.com/resources/the-turkish-clarinet">dansr.com</a>.</p></aside>
+</section>
+
+<section class="slide" data-chapter="1" data-demo="ustalar" id="ustalar">
+  <div class="text">
+    <h2>Usta icracılar</h2>
+    <p class="lead">Türk müziğinde klarnet, kayıtları bugün de dinlenen ustaların elinde kendi sesini buldu. Burada altısını aynı zaman çizgisinde görüyorsunuz.</p>
+    <p>Klarnet uzun süre usta-çırak ilişkisiyle, ustayı dinleyerek ve taklit ederek öğrenildi. Bugün Güzel Sanatlar Liselerinin klarnet programı da Türk müziği perdelerini öğretiyor.</p>
+    <p>Bu sitede kayıt yok; ustaları kendi kayıtlarından dinlemenizi öneririz. Etiketlerdeki bağlantılar Vikipedi maddelerine gider.</p>
+    <p class="try">Plak etiketlerinden birine dokunun: o ustanın yaşam çizgisi zaman ekseninde aydınlanır.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Şükrü Tunar (1907–15 Ağustos 1962). Doğum yeri kaynaklarda Edremit ya da Edirne olarak geçiyor; ikisini de yazdık.</li>
+    <li>Mustafa Kandıralı (10 Temmuz 1930 Kandıra – 27 Aralık 2020 İstanbul), Barbaros Erköse (1936 Bursa), Selim Sesler (1957 Keşan – 9 Mayıs 2014 İstanbul), Hüsnü Şenlendirici (12 Temmuz 1976 Bergama), Serkan Çağrı (2 Haziran 1976 Keşan; <em>Sol Klarnet Eğitimi 1</em>, 2006).</li>
+    <li>Usta-çırak aktarımı ve kulaktan öğrenme: Üstündağ ve Kurtaslan 2024; MEB GSL programı da süslemelerin ustalar dinlenerek kazanıldığını yazar.</li>
+    <li>Seçim kaçınılmaz olarak eksik: burada yalnızca yaşam tarihlerini doğrulayabildiğimiz ustalara yer verdik.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Vikipedi maddeleri (Şükrü Tunar, Mustafa Kandıralı, Barbaros Erköse, Selim Sesler, Hüsnü Şenlendirici, Serkan Çağrı); Üstündağ ve Kurtaslan (2024); MEB Güzel Sanatlar Lisesi Klarnet Dersi Öğretim Programı.</p></aside>
+</section>
+
+<!-- ================= 2. KLARNET NASIL SES ÇIKARIR? ================= -->
+<section class="slide" data-chapter="2" data-demo="kamis" id="kamis">
+  <div class="text">
+    <h2>Kamış bir supap</h2>
+    <p class="lead">Klarnetin sesi ince bir kamış yaprağıyla başlar. Kamış ağızlığa bağlanır; aralarında yaklaşık bir milimetrelik bir aralık kalır. Üflediğinizde hava bu aralıktan boruya girer.</p>
+    <p>Ağızdaki basınç arttıkça kamış ağızlığa doğru itilir ve aralığı daraltır. Borudan geri dönen basınç dalgası kamışı bir an açar, bir an kapatır. Kamış böylece bir supap gibi çalışır: borunun içindeki titreşimi besleyen, saniyede yüzlerce kez açılıp kapanan bir kapı.</p>
+    <p>Kamışın hızını kamış değil, boru belirler. Kamış borudaki duran dalgaya ayak uydurur; bu yüzden parmak pozisyonunu değiştirince ses değişir.</p>
+    <p class="try">Nefes basıncını yavaşça artırın. Bir eşiğe kadar yalnızca hava sesi duyulur; eşiği geçince kamış titreşmeye başlar.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Kamış, ağızdaki basınçla borudaki basınç arasındaki farka göre açılıp kapanan bir supaptır. Basınç farkı büyüdükçe aralık daralır; çok büyüyünce kamış ağızlığa yapışır ve ses kesilir.</li>
+    <li>Kamış kendi doğal frekansından çok daha yavaş titreşir; frekansı borunun rezonansı belirler.</li>
+    <li>Sesi üreten model: McIntyre, Schumacher ve Woodhouse'un (1983) kamış ve boru modeli; Julius O. Smith'in dalga kılavuzu yaklaşımı ve STK kitaplığındaki Clarinet sınıfı. Kamış, basınç farkını yansıma katsayısına çeviren basit bir tabloyla temsil ediliyor.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: J. Wolfe, "Clarinet acoustics: an introduction", UNSW Music Acoustics, <a href="https://newt.phys.unsw.edu.au/jw/clarinetacoustics.html">newt.phys.unsw.edu.au</a>; McIntyre, Schumacher ve Woodhouse, "On the oscillations of musical instruments", JASA 74(5), 1983; J. O. Smith III, <em>Physical Audio Signal Processing</em>, <a href="https://ccrma.stanford.edu/~jos/pasp/">CCRMA</a>; Cook ve Scavone, The Synthesis ToolKit (STK).</p></aside>
+</section>
+
+<section class="slide" data-chapter="2" data-demo="harmonik" id="tek-harmonikler">
+  <div class="text">
+    <h2>Kapalı borunun şarkısı</h2>
+    <p class="lead">Flütün borusu iki ucundan da açıktır. Klarnetinki ise kamış ucunda kapalı, kalak ucunda açık bir boru gibi davranır. Bu fark, klarnetin sesini hemen tanınır kılar.</p>
+    <p>Bir ucu kapalı silindirik boruda yalnızca temel frekansın <strong>tek katları</strong> rahatça duran dalga kurar: 1, 3, 5, 7… Klarnetin pes bölgesinde bu yüzden tek harmonikler güçlü, çiftler zayıftır. Kulak bunu "koyu", "boğuk", biraz da "tahtamsı" bir ses olarak duyar.</p>
+    <p>Bu, kaba bir kuraldır: tiz bölgede ve güçlü nefeste çift harmonikler de belirir. Ama klarnetin sesinin imzası tek harmoniklerdir.</p>
+    <p class="try">Harmonikleri tek tek açıp kapatın. Çift harmonikleri kapatınca ses klarnete, tek harmonikleri kapatınca başka bir şeye benzer.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Açık–kapalı silindirik borunun rezonansları f, 3f, 5f… dizisidir (dalga boyunun dörtte biri boru boyuna sığar). Açık–açık borunun (flüt) rezonansları f, 2f, 3f… dizisidir.</li>
+    <li>Gerçek klarnette çift harmonikler sıfır değildir; özellikle kesim frekansının üstünde (yaklaşık 1,5 kHz) ve güçlü nefeste belirginleşir.</li>
+    <li>Spektrum, sitedeki fiziksel modelin o anki çıktısından hesaplanıyor (FFT). Müzik eğitimindeki "Tını" slaytı aynı fikri sentezle anlatır.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wolfe, "Clarinet acoustics: an introduction" (UNSW); Wikipedia, "Clarinet" (Acoustics bölümü).</p></aside>
+</section>
+
+<section class="slide" data-chapter="2" data-demo="onikili" id="onikili">
+  <div class="text">
+    <h2>Oktav değil, onikili</h2>
+    <p class="lead">Flütte daha güçlü üfleyince ses bir oktav yükselir. Klarnette ise register anahtarını açınca ses bir oktav artı bir beşli yükselir: bir <strong>onikili</strong>.</p>
+    <p>Neden? Register anahtarı borunun üst kısmında küçük bir delik açar. Bu delik temel titreşimi bozar ve klarneti bir sonraki duran dalgaya iter. Kapalı boruda bir sonraki titreşim 2. değil 3. harmoniktir; frekans üç katına çıkar. Üç kat, bir oktav (2 kat) artı bir beşlidir (3/2).</p>
+    <p>Sonuç: klarnette aynı parmaklar alt registerde yazılı Mi3'ü, register anahtarıyla Si4'ü çalar. Flüt ve saksafonda bir oktav yukarıdaki notayı çalan parmaklar klarnette başka bir notayı çalar; klarnetçinin iki parmak düzeni öğrenmesi bundandır.</p>
+    <p class="try">Register anahtarını açıp kapatın. Borudaki duran dalga birinci kipten üçüncü kipe geçer.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Register anahtarının deliği, birinci kipin basınç düğümüne yakın değil, onu bozacak bir konumdadır; üçüncü kip ise bu delikten daha az etkilenir.</li>
+    <li>Tek bir register deliği bütün notalar için ideal yerde olamaz; bu yüzden klarnetin "boğaz" sesleri (yazılı Sol4–Si♭4) ve register geçişi zordur.</li>
+    <li>Saksafon konik borulu olduğu için oktavlaşır; klarnet silindirik borulu olduğu için onikilileşir.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wolfe, "Clarinet acoustics: an introduction" (UNSW); Wikipedia, "Register key", "Clarinet".</p></aside>
+</section>
+
+<section class="slide" data-chapter="2" data-demo="delikler" id="delikler">
+  <div class="text">
+    <h2>Delikler boruyu kısaltır</h2>
+    <p class="lead">Bütün delikler kapalıyken klarnetin borusu en uzun hâlindedir ve en pes notayı çalar. Bir deliği açınca hava oradan dışarı kaçar; boru, akustik olarak o deliğin bittiği yerde bitmiş gibi davranır.</p>
+    <p>Kalaktan başlayarak delikleri birer birer açtıkça boru kısalır, ses yükselir. Alttaki bir deliği kapalı tutup üsttekini açmak (<strong>çatal</strong> pozisyon) sesi biraz pesleştirir; bir deliği yarım kapatmak sesi iki nota arasında bir yere götürür.</p>
+    <p>Klarnet çizimi sitenin her yerinde aynı: dolu daire kapalı, boş halka açık, çapraz kesilmiş yarım daire yarım kapalı delik. Anahtarlar basılıyken gümüş dolgulu görünür.</p>
+    <p class="try">Ağızlığı basılı tutun ve deliklere dokunun: boru boyu ve ses birlikte değişir. Bir deliğe uzun basmak onu yarım kapatır.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Açık bir delik, borunun "etkin boyunu" kısaltır. Delik ne kadar büyükse etkin uç deliğe o kadar yakındır.</li>
+    <li>Çizim Albert sistem bir Sol klarnetin stilize hâlidir: ön yüzde 6 delik ve anahtarlar, yanda arka yüz şeridinde başparmak deliği ve register anahtarı.</li>
+    <li>Fiziksel model delikleri tek tek hesaplamaz; parmak pozisyonundan hedef boru boyunu bulur. Tabloda olmayan birleşimlerin sesi kaba bir kuralla tahmin edilir ve ekranda "yaklaşık" yazar. Yarım delik ve çatal etkisi de bu kuralla yaklaşık gösterilir.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wolfe, "Clarinet acoustics: an introduction" (UNSW); Woodwind Fingering Guide, Albert/Oehler klarnet anahtar şeması, <a href="https://www.wfg.woodwind.org/clarinet/cl_fing.html">wfg.woodwind.org</a>.</p></aside>
+</section>
+
+<!-- ================= 3. ÇALGIYI TANI ================= -->
+<section class="slide" data-chapter="3" data-demo="parcalar" id="parcalar">
+  <div class="text">
+    <h2>Parçalar ve takma sırası</h2>
+    <p class="lead">Klarnet beş parçadan oluşur: ağızlık, barilet, üst gövde, alt gövde ve kalak. Ağızlığa kamış ve onu tutan kelepçe takılır.</p>
+    <p>Takarken mantarları zorlamayın; mantar kuruysa biraz mantar yağı sürün. Üst ve alt gövdeyi birleştirirken iki gövde arasındaki köprü anahtarlarına dikkat edin: birbirine çarpıp bükülmesinler. Anahtarlardan değil, gövdenin anahtarsız yerlerinden tutun.</p>
+    <p>Kamışı en son takın: ucu ağızlığın ucuyla aynı hizada, ortası ağızlığın ortasında olsun. Kelepçeyi kamışı ezmeden, sallanmayacak kadar sıkın.</p>
+    <p class="try">Parçalara dokunun, adlarını görün. "Tak" düğmesi parçaları sırasıyla birleştirir.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Sıra çoğu öğretim kaynağında aşağı yukarı aynıdır: alt gövde ve kalak, üst gövde (köprü anahtarına dikkat), barilet, ağızlık, en son kamış ve kelepçe.</li>
+    <li>Albert sistem klarnetlerde köprü anahtarı sistemi modele göre farklıdır. Öğrencinin kendi klarnetinin hangi anahtarının iki gövdeyi bağladığını öğretmenine göstermesi iyi olur.</li>
+    <li>Kelepçe: Türkçede "kelepçe" ya da "bilezik" denir; burada kamış bağı için kelepçe, gövdedeki metal halkalar için bilezik dedik.</li>
+  </ul>
+  <p class="kaynak">Kaynak: Wikipedia, "Clarinet" (Construction); MEB Güzel Sanatlar Lisesi Klarnet Dersi Öğretim Programı (çalgının bakımı ve kurulması kazanımları).</p></aside>
+</section>
+
+<section class="slide" data-chapter="3" data-demo="solsib" id="sol-ve-sib">
+  <div class="text">
+    <h2>Sol klarnet ve Si<span class="bemol">♭</span> klarnet</h2>
+    <p class="lead">Klarnetler <strong>aktarımlı</strong> çalgılardır: nota yazıldığı gibi değil, sabit bir aralık pest duyulur. Klarnetin adı, yazılı Do'nun hangi sesle duyulduğunu söyler.</p>
+    <p>Si♭ klarnette yazılı Do, Si♭ olarak duyulur: ses yazılandan bir büyük ikili pesttir. <strong>Sol klarnette</strong> yazılı Do, Sol olarak duyulur: ses bir tam dörtlü pesttir. Sol klarnet bu yüzden daha uzundur; Alman tipi Sol klarnetler 75–78 cm civarındadır.</p>
+    <p>Klarnetçiler aynı parmak düzenini bütün klarnetlerde kullanır. Hangi klarneti alırsanız alın, "Do" parmağı yazılı Do'yu çalar; duyulan ses klarnetin boyuna bağlıdır.</p>
+    <p class="try">Aynı yazılı notayı iki klarnette çalın. Sol klarnetin sesi daha pes ve daha koyudur.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Sol klarnet tam dörtlü (5 yarım ses) pest duyulur: Kılıç 2023 (Çağrı 2006'ya atıfla), Yarman (RaDüSe). Estrin 2021 Sol klarnetin Si♭ klarnetten küçük üçlü pest olduğunu yazar; bu, aynı ilişkinin öbür yüzüdür (5 − 2 = 3 yarım ses).</li>
+    <li>Alman tipi Sol klarnetin boyu 75–78 cm: Üstündağ ve Kurtaslan 2024. Si♭ soprano klarnet yaklaşık 66 cm'dir (Wikipedia).</li>
+    <li>Sayılar: yazılı Do5 Sol klarnette Sol4 (392,0 Hz), Si♭ klarnette Si♭4 (466,2 Hz) duyulur (La4 = 440 Hz).</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Kılıç (2023); Yarman, "RaDüSe", <a href="https://www.ozanyarman.com/RaDuSe1.html">ozanyarman.com</a>; Estrin (2021); Üstündağ ve Kurtaslan (2024); Wikipedia, "Clarinet".</p></aside>
+</section>
+
+<section class="slide" data-chapter="3" data-demo="albertboehm" id="albert-boehm">
+  <div class="text">
+    <h2>Albert ve Boehm</h2>
+    <p class="lead">Türkiye'de Sol klarnetlerin çoğu <strong>Albert</strong> sistemindedir; Batı müziğinde ise neredeyse herkes <strong>Boehm</strong> sistemi çalar. İkisi aynı akustik ilkeyle çalışır, ama anahtarları ve bazı parmak pozisyonları farklıdır.</p>
+    <p>Örneğin Albert sistemde sağ elin birinci parmağı tek başına Si'yi (registerde Fa♯'yi) çalar; Boehm'de aynı parmak Si♭'yi verir. Albert'te Fa♯4 yalnızca başparmakla çalınır ve serçe parmak anahtarları her elde tek taraflıdır.</p>
+    <p>Neden Albert? Kaynaklar birkaç neden sayar: delikleri parmakla kapatmanın sağladığı dudak-parmak kontrolü ve kayarak geçişler, daha yumuşak ve koyu bir ses, usta-çırak geleneğinin alışkanlığı. Boehm klarnetle de Türk müziği çalınabileceğini vurgulayan yazarlar var.</p>
+    <p class="try">Bir nota seçin: iki sistemin parmak pozisyonları yan yana görünür, farklı olan anahtarlar parlar.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Albert: Müller'in 13 anahtarlı klarnetine Sax'ın halkalarının eklenmesi (1840'lar). Boehm: Klosé ve Buffet (1839–1843), 17 anahtar ve 6 halka.</li>
+    <li>Tercih nedenleri: Kılıç 2023 ("koyu ve puslu" ses, dudak-parmak kontrolüyle komaların rahat çalınması, ama Boehm ile de Türk müziği çalınabilir); Üstündağ ve Kurtaslan 2024 (yumuşak ses, az anahtar, Alman ekolü, usta-çırak alışkanlığı).</li>
+    <li>Boehm pozisyonları standart Boehm parmak tablosundan alındı; karşılaştırma yalnızca birkaç notayla sınırlı.</li>
+    <li>İki sistemin borusu arasındaki fark için sayısal bir kaynak bulamadık; bu yüzden burada ses farkını ölçülerle anlatmıyoruz.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wikipedia, "Albert system", "Boehm system (clarinet)"; Woodwind Fingering Guide, Albert/Oehler ve Boehm temel parmak tabloları; Kılıç (2023); Üstündağ ve Kurtaslan (2024).</p></aside>
+</section>
+
+<section class="slide" data-chapter="3" data-demo="kamissec" id="kamis-secimi">
+  <div class="text">
+    <h2>Kamış seçimi ve bakımı</h2>
+    <p class="lead">Kamışlar sertliklerine göre numaralanır; çoğu üreticide 1,5'ten 4 ve üstüne kadar. Sert kamış daha çok nefes ister ama daha dolgun ve kararlı bir ses verir; yumuşak kamış kolay konuşur ama perdeyi tutmak zorlaşabilir.</p>
+    <p>Türk müziğinde klarnetçiler çoğunlukla <strong>açık</strong> bir ağızlığı (kamışla ağızlık arasındaki aralık geniş) <strong>yumuşak</strong> bir kamışla birlikte kullanır. Bu birleşim dudakla perdeyi bükmeyi ve glissandoyu kolaylaştırır.</p>
+    <p>Bakım: çalmadan önce kamışın ucunu ağızda birkaç saniye ıslatın. Birkaç kamışı sırayla kullanın, böylece biri yıpranınca hepsi birden bitmez. Kamışları düz bir yüzeyde, nemi düzenleyen bir kamış kutusunda saklayın.</p>
+    <p class="try">Kamış sertliğini değiştirin ve ağızlığı basılı tutun: aynı nefesle sert kamışın ne zaman sustuğunu, yumuşak kamışın nasıl parladığını dinleyin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Açık bek ve yumuşak kamış tercihi: Taşır vd. 2019 (ASEAD 6(6)); Estrin 2021.</li>
+    <li>Sertlik numaraları üreticiler arasında aynı değildir; bir markanın 2,5'i öbürünün 3'üne denk gelebilir.</li>
+    <li>Modelde kamış sertliği, kamış tablosunun eğimini değiştirir; sert kamışta salınım için gereken basınç artar.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Taşır vd., ASEAD 6(6), 2019; Estrin (2021); Wikipedia, "Reed (mouthpiece)".</p></aside>
+</section>
+
+<!-- ================= 4. İLK SES ================= -->
+<section class="slide" data-chapter="4" data-demo="agiz" id="agiz-yapisi">
+  <div class="text">
+    <h2>Ağız yapısı</h2>
+    <p class="lead">Ağız yapısı, dudakların, dişlerin ve çene kaslarının ağızlığı tutuş biçimidir. Klarnetin rengi ve perdesi büyük ölçüde burada belirlenir.</p>
+    <p>Yaygın bir başlangıç: alt dudak alt dişlerin üzerine hafifçe kıvrılır ve kamış bu yastığa oturur. Üst dişler ağızlığın üstüne değer. Ağız köşeleri ağızlığı her yandan sarar, hava kaçırmaz. Ağızlığın ne kadarının ağza gireceği kamışın ağızlıktan ayrıldığı noktaya göre ayarlanır.</p>
+    <p>Öğretmenler ve ekoller arasında farklar var. Türk müziği çalan klarnetçiler ayrıca perdeyi dudakla bükmeye çalışır; koma perdeleri büyük ölçüde böyle çalınır (6. bölüm). Burada tek doğru bir yol değil, sık yapılan hataların sese etkisini gösteriyoruz.</p>
+    <p class="try">Dört ağız yapısını deneyin. Çok gevşek ağızda hava sesi, çok sıkı ağızda cıyaklama duyulur.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Bu slayt genel klarnet tekniğini anlatır; ayrıntılar öğretmene ve ekole göre değişir. Öğrencinin bir öğretmenle çalışması en doğrusudur.</li>
+    <li>Modelde "ağız yapısı" iki şeye karşılık gelir: kamışın açıklığı (dudak baskısı) ve nefes. Cıyaklama modelde bir kurala bağlıdır: çok sıkı dudak ve çok güçlü nefeste kamış bir üst kipe sıçrar.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wikipedia, "Embouchure" (Woodwind); MEB Güzel Sanatlar Lisesi Klarnet Dersi Öğretim Programı; Kılıç (2023) ve Üstündağ ve Kurtaslan (2024): Türk müziğinde dudak kontrolünün rolü.</p></aside>
+</section>
+
+<section class="slide" data-chapter="4" data-demo="nefes" id="nefes">
+  <div class="text">
+    <h2>Nefes ve kamış</h2>
+    <p class="lead">İyi bir klarnet sesi iki şeyin dengesidir: ne kadar <strong>nefes</strong> verdiğiniz ve dudağınızın kamışa ne kadar <strong>baskı</strong> yaptığı.</p>
+    <p>Az nefeste kamış titreşmeye başlamaz; yalnızca hava sesi çıkar. Nefes arttıkça ses doğar, büyür ve parlaklaşır. Dudak baskısı da perdeyi ve rengi değiştirir: gevşek dudak sesi pesleştirir ve koyulaştırır, sıkı dudak tizleştirir ve inceltir. Çok sıkı dudak ve güçlü nefes birlikte gelince kamış bir üst titreşime sıçrar: klarnetçilerin "kaz sesi" dediği cıyaklama.</p>
+    <p>Haritadaki bölgeler sitedeki klarnet modelinin gerçek davranışından ölçüldü. Gerçek bir klarnette sınırlar ağızlığa, kamışa ve çalana göre kayar, ama bölgelerin dizilişi benzerdir.</p>
+    <p class="try">Haritada gezinin ya da noktayı sürükleyin: sessiz bölge, güzel ses bölgesi ve kaz sesi bölgesi.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Harita, fiziksel modelin bir nefes × dudak ızgarasında üretilen seslerinin ölçülmesiyle önceden hesaplandı (tools/harita.js). Renk ses düzeyini, çizgiler perdenin hedeften sapmasını gösterir.</li>
+    <li>Dudakla perde bükme: modelde gevşek dudak en çok yaklaşık 70 cent pesleştirir, sıkı dudak yaklaşık 30 cent tizleştirir. Bu aralıklar gerçek klarnetteki bükme payının kaba bir tahminidir.</li>
+    <li>Gerçek klarnette cıyaklamanın başka nedenleri de vardır: hava kaçıran delik, kamışın yanlış oturması, ağızlığın çok içeride olması.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wolfe, "Clarinet acoustics: an introduction" (UNSW), oynama (playing) parametreleri bölümü; McIntyre, Schumacher ve Woodhouse (1983).</p></aside>
+</section>
+
+<section class="slide" data-chapter="4" data-demo="dil" id="dil">
+  <div class="text">
+    <h2>Dil vuruşu</h2>
+    <p class="lead">Notayı başlatan nefes değil dildir. Dilin ucu kamışın ucuna hafifçe değer ve çekilir; hava akışı açılır ve nota başlar. Bu hareket "tu" ya da "du" hecesine benzer.</p>
+    <p>"Tu" daha belirgin, "du" daha yumuşak bir başlangıç verir. Notaları dil vurmadan, yalnızca parmakları değiştirerek birbirine bağlamaya <strong>legato</strong>, kısa ve ayrık çalmaya <strong>staccato</strong> denir.</p>
+    <p>Klarnetçinin ifadesi büyük ölçüde bu dört renk arasındaki seçimlerden gelir. Oyun havalarında net ve canlı dil vuruşları, şarkı eşliğinde uzun bağlı cümleler öne çıkar.</p>
+    <p class="try">Aynı kısa ezgiyi dört biçimde dinleyin. Alttaki zarf çizgisi her notanın nefes basıncını gösterir.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Dil vuruşu kamışı bir an durdurur, böylece notanın başı netleşir. Hava desteği notalar arasında kesilmez.</li>
+    <li>Modelde dil vuruşu nefes basıncının çok kısa bir düşüşüyle taklit ediliyor: "tu" düşüşü derin ve kısa, "du" düşüşü daha sığ.</li>
+    <li>Ezgi bu site için yazıldı.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wikipedia, "Articulation (music)", "Tonguing"; MEB Güzel Sanatlar Lisesi Klarnet Dersi Öğretim Programı (dil vuruşu ve bağlı çalma kazanımları).</p></aside>
+</section>
+
+<section class="slide" data-chapter="4" data-demo="uzunses" id="uzun-ses">
+  <div class="text">
+    <h2>Uzun ses çalışması</h2>
+    <p class="lead">Klarnetçilerin günlük çalışmasının başında genellikle uzun sesler gelir: bir notayı olabildiğince sabit, düz ve temiz tutmak.</p>
+    <p>Mikrofonu açın ve bir notayı 8–10 saniye tutun. Grafik perdenin zaman içindeki yolunu çizer. Altında üç ölçü var: hedeften ortalama sapma, <strong>kararlılık</strong> (perdenin ne kadar oynadığı, cent cinsinden) ve varsa <strong>vibrato</strong>nun genişliği ve hızı.</p>
+    <p>Önce vibratosuz, dümdüz bir ses hedefleyin. Sonra aynı notada bilerek yavaş ve düzenli bir vibrato yapmayı deneyin: grafik düzgün bir dalgaya dönüşmeli.</p>
+    <p class="try">Mikrofonunuz yoksa "Örnek öğrenci" düğmesine basın: sentezlenmiş bir ses önce titrek, sonra kararlı, sonra vibratolu çalar.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Kararlılık: son birkaç saniyedeki perdenin standart sapması (cent). 5 centin altı çok kararlı sayılabilir; bu bir ölçüdür, not değildir.</li>
+    <li>Vibrato: perdenin düzenli salınımı. Genişlik (tepeden tepeye cent) ve hız (Hz) perde izinin sıfır geçişlerinden hesaplanır.</li>
+    <li>Ses tarayıcıda işlenir, hiçbir yere gönderilmez. Perde YIN algoritmasıyla bulunur (de Cheveigné ve Kawahara 2002).</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: de Cheveigné ve Kawahara, "YIN, a fundamental frequency estimator for speech and music", JASA 111(4), 2002; Şahinoğlu (2022), Yegah Müzikoloji Dergisi 5(2): klarnette vibrato.</p></aside>
+</section>
+
+<!-- ================= 5. PARMAKLAR VE NOTALAR ================= -->
+<section class="slide" data-chapter="5" data-demo="alt" id="chalumeau">
+  <div class="text">
+    <h2>İlk notalar: alt register</h2>
+    <p class="lead">Klarnetin alt registeri <strong>chalumeau</strong> diye anılır: yazılı Mi3'ten Si♭4'e kadar. İlk notalar burada öğrenilir.</p>
+    <p>Başlangıç noktası bütün deliklerin açık olduğu yazılı Sol4'tür; Türk müziği yazımında bu nota <strong>Rast</strong> perdesidir. Sol elin başparmağıyla arka deliği kapatınca Fa♯4, birinci parmakla Mi4, ikinci parmakla Re4, üçüncü parmakla Do4 çalınır. Sağ elin parmakları da eklendikçe ses Sol3'e, serçe parmak anahtarlarıyla Mi3'e kadar iner.</p>
+    <p>Delikleri parmak uçlarıyla değil, parmakların yumuşak etli kısmıyla kapatın; hava kaçıran tek bir delik bile sesi bozar.</p>
+    <p class="try">Notaları sırayla seçin: parmaklar klarnet çiziminde yerine oturur ve ses çalar. Ya da çizimde delikleri kendiniz kapatıp ağızlığı basılı tutun.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Pozisyonlar Woodwind Fingering Guide'ın Albert/Oehler temel tablosundan (E. McAuley, A. Wendl). Albert sistemde Fa♯4 yalnızca başparmakla, Fa4 başparmak + 1. parmak + sağ el 3. yan anahtarla çalınır.</li>
+    <li>MEB GSL programında yazılı Sol4 "sol (rast)", yazılı Mi3 "kaba hüseynî aşîrân" olarak geçer.</li>
+    <li>Duyulan sesler Sol klarnet içindir: yazılı Sol4, Re4 (293,7 Hz) olarak duyulur.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Woodwind Fingering Guide, "Chalumeau Register Basic Fingering Chart for Oehler- and Albert-System Clarinet", <a href="https://www.wfg.woodwind.org/clarinet/ocl_bas_1.html">wfg.woodwind.org</a>; MEB GSL Klarnet Programı, <a href="https://mufredat.meb.gov.tr/Dosyalar/201992691038263-%C3%A7alg%C4%B1%20e%C4%9Fitimi%20klarnet.pdf">mufredat.meb.gov.tr</a>.</p></aside>
+</section>
+
+<section class="slide" data-chapter="5" data-demo="ust" id="clarion">
+  <div class="text">
+    <h2>Üst register</h2>
+    <p class="lead">Register anahtarını açınca aynı parmaklar bir onikili yukarıdaki notayı çalar. Yazılı Mi3 parmağı Si4'ü, Fa3 parmağı Do5'i, Sol3 parmağı Re5'i verir. Bu bölgeye <strong>clarion</strong> denir: yazılı Si4'ten Do6'ya.</p>
+    <p>İki register arasındaki geçiş klarnetin en zor yeridir. Boğaz seslerinden (Sol4–Si♭4) Si4'e geçerken birden bütün delikleri kapatmak gerekir. Önce sağ el parmaklarını kapalı tutarak boğaz seslerini çalmak bu geçişi kolaylaştırır; tablodaki "sağ el kapalı" pozisyonları bunun içindir.</p>
+    <p class="try">Bir alt register notası seçin ve register anahtarını açıp kapatın: iki nota arasındaki onikiliyi dinleyin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Clarion pozisyonları alt registerinkilerin aynısı, artı register anahtarı (WFG). Yazılı Do6 Albert'te başparmak + register + sol el 2. parmakla çalınır.</li>
+    <li>Boğaz seslerinde sağ elin kapalı tutulması WFG'de "basic simple vent fingering" olarak verilir.</li>
+  </ul>
+  <p class="kaynak">Kaynak: Woodwind Fingering Guide, "Clarion Register Basic Fingering Chart for Oehler- and Albert-System Clarinet", <a href="https://www.wfg.woodwind.org/clarinet/ocl_bas_2.html">wfg.woodwind.org</a>.</p></aside>
+</section>
+
+<section class="slide wide" data-chapter="5" data-demo="tablo" id="parmak-tablosu">
+  <div class="text">
+    <h2>Parmak tablosu</h2>
+    <p>Albert sistem Sol klarnetin yazılı Mi3–Sol6 aralığı. Batı adıyla (Do, Re…) ya da Türk perde adıyla (Rast, Dügâh…) arayın. Alternatif pozisyonlar, kaynağı ve güven düzeyi her notanın altında; bir klarnetçi tarafından denetlenmesi beklenenler <span class="dogrula">doğrulanmalı</span> işaretli.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Bu bir çalışma aracı: notaya dokununca pozisyon çizimde görünür ve ses çalar; çizimde delikleri değiştirince tablo o pozisyonu bulur.</li>
+    <li>Temel ve alternatif pozisyonlar WFG Albert/Oehler tablolarından. Bazı alternatifler WFG'de belirli modeller için verilmiş; Türk Sol klarnetlerinde ek anahtarlar olabilir.</li>
+    <li>Çeyrek ses pozisyonları WFG'nin çeyrek ses tablosundan (A. Wendl). Türk müziği perdeleri için yazılmamışlardır; hepsi "doğrulanmalı".</li>
+    <li>Perde adları yazılı notanın AEU sistemindeki karşılığıdır (Rast = yazılı Sol4).</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Woodwind Fingering Guide, Albert/Oehler klarnet temel, alternatif ve çeyrek ses tabloları, <a href="https://www.wfg.woodwind.org/clarinet/">wfg.woodwind.org/clarinet</a>; MEB GSL Klarnet Programı.</p></aside>
+</section>
+
+<section class="slide" data-chapter="5" data-demo="aktarim" id="aktarim">
+  <div class="text">
+    <h2>Yazılan ve duyulan</h2>
+    <p class="lead">Türk müziği notası her zaman aynı yazılır: Rast perdesi portede Sol'dür. Ama hangi yükseklikte çalınacağı <strong>ahenge</strong> bağlıdır. Ahenk adlarını ney boylarından alır: bolahenk, süpürde, kız, mansur…</p>
+    <p>En yaygını <strong>bolahenk</strong>tir: portedeki La (dügâh) yaklaşık 330 Hz, yani yazılandan bir tam dörtlü pest duyulur. Bu, Sol klarnetin aktarımıyla aynı aralıktır. Notayı yazıldığı gibi okuyan bir Sol klarnetçi kendiliğinden bolahenkte çalar.</p>
+    <p>Si♭ klarnetle yazıldığı gibi çalınca Rast perdesi Fa olarak duyulur. Başka ahenklerde çalmak için klarnetçi ya başka boyda bir klarnet alır ya da notayı aktarır.</p>
+    <p class="try">Bir perde, bir ahenk ve bir klarnet seçin: hesaplayıcı duyulan sesi ve hangi yazılı notayı çalmanız gerektiğini gösterir.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Bolahenk: portedeki La 330 Hz (musiki.org). Hatipoğlu 2013: dişi sazlarda La440 = Nevâ; erkek sazlar bir oktav pest.</li>
+    <li>"Sol klarnet resmen bolahenk çalgısıdır" diyen bir kaynak bulamadık; yalnızca iki aralığın aynı olduğunu söylüyoruz (hesap).</li>
+    <li>Ahenklerde Rast'ın duyulduğu ses: bolahenk Re, süpürde Do, kız La, mansur Sol (Yarman; Hatipoğlu). Şah (Fa) ve davud (Mi) için yalnızca ikincil kaynaklar bulduk: "doğrulanmalı". Yıldız ahengi için kaynaklar çelişiyor; listeye almadık.</li>
+    <li>Hamparsum notası: 19. yüzyıl başında Hamparsum Limonciyan'ın geliştirdiği yazı; birçok eser bu yazıyla korunmuştur. Bugün eğitimde AEU portesi kullanılır.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: musiki.org, "Akort", <a href="http://www.musiki.org/akort.htm">musiki.org</a>; Hatipoğlu (2013), İstem 11(22), 131–144, <a href="https://dergipark.org.tr/tr/download/article-file/260938">DergiPark</a>; Yarman, "RaDüSe"; TDV İslâm Ansiklopedisi, "Âhenk".</p></aside>
+</section>
+
+<!-- ================= 6. TÜRK MÜZİĞİNİN PERDELERİ ================= -->
+<section class="slide" data-chapter="6" data-demo="koma" id="koma">
+  <div class="text">
+    <h2>Koma nedir?</h2>
+    <p class="lead">Batı müziği oktavı 12 eşit yarım sese böler. Türk müziği eğitiminde en yaygın kuram olan Arel–Ezgi–Uzdilek sistemi ise oktavı 53 eşit parçaya, 53 <strong>koma</strong>ya böler.</p>
+    <p>Bir koma yaklaşık 22,6 centtir. Bir tam ses 9 koma (<strong>tanini</strong>) sayılır. Daha küçük aralıklar da vardır: 4 komalık <strong>bakiye</strong>, 5 komalık küçük <strong>mücennep</strong>, 8 komalık büyük mücennep. Hicaz dörtlüsünün ortasındaki geniş aralık ise 12 komalık <strong>artık ikili</strong>dir.</p>
+    <p>Bu aralıklar Türk müziğinin rengini verir. Örneğin uşşak dörtlüsünün ilk aralığı 8 komadır: Batı'nın 9 komalık tam sesinden dar, yarım sesinden geniş.</p>
+    <p class="try">Aralıkları dinleyin: 1, 4, 5, 8 ve 9 koma. Sonra 8 ile 9 komayı art arda çalıp farkı duymaya çalışın.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>1 koma = 1200/53 ≈ 22,64 cent (Holdrian koması). AEU'da kullanılan perdeler 53 komanın 24'üdür.</li>
+    <li>Müzik eğitiminin "Türk müziği ve koma" slaytı aynı konuyu Hicaz dizisiyle anlatır: <a href="https://egitim.koraytoksoz.com/muzik/#turk-muzigi">egitim.koraytoksoz.com/muzik</a>.</li>
+    <li>AEU kuramının uygulamayı tam yansıtmadığı, icrada perdelerin makama göre oynadığı yaygın bir eleştiridir; bunu 22. slaytta göreceğiz.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Can (2002), GEFAD 22(1); Wikipedia, "Turkish makam" (Commas and accidentals); TDV İslâm Ansiklopedisi, "Makam".</p></aside>
+</section>
+
+<section class="slide" data-chapter="6" data-demo="perdeler" id="perdeler">
+  <div class="text">
+    <h2>Perdeler ve adları</h2>
+    <p class="lead">Türk müziğinde her perdenin bir adı vardır: Yegâh, Hüseynî aşîrân, Rast, Dügâh, Segâh, Çârgâh, Nevâ, Hüseynî, Eviç, Gerdâniye, Muhayyer… Adların çoğu Farsçadır: <em>dügâh</em> "ikinci yer", <em>segâh</em> "üçüncü yer", <em>çârgâh</em> "dördüncü yer" demektir.</p>
+    <p>Izgarada perdeler Batı'nın 12 sesiyle yan yana duruyor. Çoğu perde bir Batı notasına çok yakındır. Ama bazıları 10 centten fazla sapar; onları <span class="c-koma">çivit</span> renkte görüyorsunuz. Segâh eşit tamperamanlı Si'den yaklaşık 15 cent, Eviç Fa♯'den 13 cent pesttir.</p>
+    <p>AEU yazımı bu sapmaları özel değiştirici işaretlerle gösterir: Segâh "Si koma bemol", Eviç "Fa bakiye diyez" diye yazılır.</p>
+    <p class="try">Bir perdeye dokunun: klarnetteki pozisyonu, Batı karşılığı ve dudakla hangi yöne bükmeniz gerektiği görünür.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Perde komaları (Rast = 0): Yegâh −22, Hüseynî aşîrân −13, Acem aşîrân −9, Irak −5, Zirgüle 5, Dügâh 9, Kürdî 13, Dik kürdî 14, Segâh 17, Bûselik 18, Çârgâh 22, Nîm hicaz 26, Hicaz 27, Nevâ 31, Hisar 36, Hüseynî 40, Acem 44, Eviç 48, Mâhur 49, Gerdâniye 53, Şehnaz 58, Muhayyer 62.</li>
+    <li>Sapmalar, Rast'ı eşit tamperamanlı Sol'e eşitleyerek hesaplandı. AEU'nun doğal notaları Pisagor aralıklarıyla dizildiği için Dügâh bile +3,8 cent sapar.</li>
+    <li>Değiştirici işaretlerin biçimleri: SMuFL AEU tablosu ve Wikipedia "Turkish makam".</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Can (2002); Wikipedia, "Turkish makam"; SMuFL, "Arel-Ezgi-Uzdilek (AEU) accidentals".</p></aside>
+</section>
+
+<section class="slide" data-chapter="6" data-demo="komaklarnet" id="koma-klarnette">
+  <div class="text">
+    <h2>Koma perdeleri klarnette</h2>
+    <p class="lead">Klarnetin delikleri 12 sese göre açılmıştır; mekanizmada koma yoktur. Koma perdeleri çalgıcının elinde ve dudağında doğar.</p>
+    <p>Kaynaklar <strong>dudağı</strong> ana yöntem olarak gösterir: en yakın Batı notasının pozisyonu alınır ve perde dudak baskısıyla gerektiği kadar pesleştirilir ya da tizleştirilir. Bazı perdelerde <strong>yarım delik</strong> ya da <strong>çatal ve alternatif pozisyonlar</strong> da kullanılır.</p>
+    <p>Perdenin kaç koma pest çalınacağı da sabit değildir. Şahinoğlu'nun çalışmasına göre segâh, Uşşak makamında Rast'takinden daha pest çalınır; dik basılırsa kulağa bûselik gibi gelir. Hangi perdenin nasıl çalınacağını kulak ve üstatlar belirler. Tek doğru yol yok.</p>
+    <p class="try">Segâh'ı üç yoldan bulmayı deneyin: dudak kaydırıcısı, yarım delik ve alternatif pozisyon. Izgaradaki iz perdenin nereye düştüğünü gösterir.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Ana yöntem dudak: Üstündağ ve Kurtaslan 2024; Kılıç 2023 (Sağlam 2021'e atıfla); Şahinoğlu 2022. MEB programı da "mekanizmada koma yok" der.</li>
+    <li>Segâhın makama göre değişmesi: Şahinoğlu 2022.</li>
+    <li>Yarım delik burada bir fizik gösterimidir; hangi perdede kullanıldığını gösteren erişilebilir bir kaynak bulamadık.</li>
+    <li>Alternatif pozisyonlar WFG çeyrek ses tablosundan (A. Wendl), Türk müziği için yazılmamış: hepsi "doğrulanmalı". Bu konudaki asıl kaynak Sefa Yaşar'ın 2021 tarihli yüksek lisans tezidir (AMGSÜ); tezin tam metnine erişemedik.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Şahinoğlu (2022), Yegah Müzikoloji Dergisi 5(2), 296–316, <a href="https://dergipark.org.tr/en/download/article-file/2814075">DergiPark</a>; Üstündağ ve Kurtaslan (2024); Kılıç (2023); MEB GSL Klarnet Programı; WFG çeyrek ses tablosu, <a href="https://www.wfg.woodwind.org/clarinet/ocl_qt_1.html">wfg.woodwind.org</a>.</p></aside>
+</section>
+
+<section class="slide" data-chapter="6" data-demo="akort" id="akort">
+  <div class="text">
+    <h2>Koma akort aleti</h2>
+    <p class="lead">Mikrofonu açın ve bir nota çalın. Alet en yakın perdeyi, perdeden kaç koma ve kaç cent saptığınızı ve aynı sesin Batı adını gösterir.</p>
+    <p>Ahengi ve klarnet türünü seçin: bolahenkte bir Sol klarnetle yazılı La4 çaldığınızda alet "Dügâh" der. Si♭ klarnet ya da başka bir ahenk seçerseniz perde adları ona göre kayar.</p>
+    <p>Akort aleti kulağın yerini tutmaz; makama göre değişen perdeleri alet bilemez. Ama uzun seslerde dudağınızın perdeyi nereye götürdüğünü görmek için iyi bir aynadır.</p>
+    <p class="try">Mikrofonunuz yoksa "Deneme sesi" düğmesine basın: model, Segâh'ın çevresinde yavaşça gezinen bir ses çalar.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Ses yalnızca tarayıcıda işlenir; kaydedilmez, hiçbir yere gönderilmez. Mikrofon izni ancak düğmeye basınca istenir.</li>
+    <li>Perde: YIN algoritması, 2048 örneklik pencere, son üç ölçümün ortancası. Sentezlenmiş bir klarnet sesinde ±1 cent içinde ölçtüğünü testlerle doğruladık.</li>
+    <li>Koma sapması: ölçülen frekansın seçilen ahengin Rast'ına göre 53·log₂(f/f_rast) ile hesaplanan koma değerinden en yakın perdenin koması çıkarılarak bulunur.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: de Cheveigné ve Kawahara (2002); AEU perde tablosu (Can 2002).</p></aside>
+</section>
+
+<!-- ================= 7. MAKAMLAR ================= -->
+<section class="slide" data-chapter="7" data-demo="makamnedir" id="makam-nedir">
+  <div class="text">
+    <h2>Dizi, durak, güçlü, yeden</h2>
+    <p class="lead">Makam bir dizi demek değildir. Aynı diziden iki farklı makam çıkabilir. Makamı tanımlayan, perdelere verilen rollerdir ve ezginin izlediği yoldur.</p>
+    <p><span class="rol durak"></span><strong class="c-durak">Durak</strong>, ezginin sonunda karar verdiği perdedir. <span class="rol guclu"></span><strong class="c-guclu">Güçlü</strong>, yolda en çok yaslanılan, yarım kararların verildiği perdedir. <span class="rol yeden"></span><strong class="c-yeden">Yeden</strong>, durağın hemen altında durup ezgiyi durağa çeken perdedir. <strong>Seyir</strong> ise ezginin yoludur: pesten başlayıp çıkan (çıkıcı), tizden inen (inici) ya da ortadan başlayan (inici-çıkıcı).</p>
+    <p>Bu renkler ve biçimler sitenin her yerinde aynı: durak çift halka, güçlü elmas, yeden üçgen.</p>
+    <p class="try">Rolleri tek tek açıp kapatın ve Uşşak dizisini dinleyin. Durak ve yeden açıkken dizinin sonu nasıl "eve döner"?</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Durak, güçlü, yeden ve seyir: TDV İslâm Ansiklopedisi, "Makam". Uşşak: durak Dügâh, güçlü Nevâ, yeden Rast; seyir çıkıcı.</li>
+    <li>Renkler müzik eğitimindeki makam seyri slaytıyla aynı: <a href="https://egitim.koraytoksoz.com/muzik/#makam-seyri">egitim.koraytoksoz.com/muzik</a>.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: TDV İslâm Ansiklopedisi, "Makam", "Uşşak".</p></aside>
+</section>
+
+<section class="slide" data-chapter="7" data-demo="cinsler" id="cinsler">
+  <div class="text">
+    <h2>Dörtlüler ve beşliler</h2>
+    <p class="lead">Makam dizileri küçük yapı taşlarından kurulur: dört perdelik <strong>dörtlüler</strong> ve beş perdelik <strong>beşliler</strong>. Her birinin adı ve iç aralıkları vardır.</p>
+    <p>Rast beşlisi 9 + 8 + 5 + 9 komadır, uşşak dörtlüsü 8 + 5 + 9, hicaz dörtlüsü 5 + 12 + 5, kürdî dörtlüsü 4 + 9 + 9, bûselik beşlisi 9 + 4 + 9 + 9. Bir dörtlü ile bir beşli üst üste konunca bir oktav dolar: 22 + 31 = 53 koma.</p>
+    <p>Uşşak makamı, Dügâh'ta bir uşşak dörtlüsü ile Nevâ'da bir bûselik beşlisidir. Aynı uşşak dörtlüsüne bir hicaz beşlisi eklerseniz Karcığar'a yaklaşırsınız.</p>
+    <p class="try">Bir dörtlü ile bir beşli seçin: birleşen dizi çalar ve tanıdık bir makama benziyorsa adı görünür.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Aralık değerleri AEU'dan; dörtlü ve beşli adları TDV makam maddelerinden.</li>
+    <li>Bir makamı yalnızca dizisi tanımlamaz; aynı diziyi paylaşan makamlar seyirleri, durakları ve güçlüleriyle ayrılır. Yapboz yalnızca dizi düzeyinde bir benzerlik söyler.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: TDV İslâm Ansiklopedisi makam maddeleri; Can (2002).</p></aside>
+</section>
+
+<section class="slide" data-chapter="7" data-demo="makamlar" id="makamlar">
+  <div class="text">
+    <h2>Dokuz makam</h2>
+    <p class="lead">Klarnetçinin ilk yıllarında en sık karşılaştığı makamlardan dokuzu. Her kartta dizi, renkli roller, seyir yönü ve bu site için yazılmış kısa bir seyir cümlesi var.</p>
+    <p>Önce cümleyi dinleyin: site çalarken parmaklar klarnet çiziminde değişir. Sonra kendiniz çalın. Mikrofon açıksa her notanın perdesi ızgaraya işlenir; böylece segâhı ya da eviçi nereye koyduğunuzu görürsünüz.</p>
+    <p class="try">Bir makam seçin ve "Cümleyi dinle"ye basın. Hicaz'daki geniş aralığa ve Sabâ'nın oktavda kapanmayan dizisine dikkat edin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Makam bilgileri TDV İslâm Ansiklopedisi'nin ilgili maddelerinden: Rast, Uşşak, Hüseynî, Hicaz, Nihâvend, Kürdî, Sabâ, Karcığar, Hicazkâr. Koma dizileri bu tanımlardan hesaplandı.</li>
+    <li>Sabâ: durak Dügâh, güçlü Çârgâh; dizi Dügâh, Segâh, Çârgâh, Hicaz, Dik hisar, Acem, Gerdâniye, Şehnaz (TDV).</li>
+    <li>Seyir cümleleri bu site için yazıldı; geleneksel eserlerden alıntı değildir ve makamın bütün seyrini göstermez.</li>
+    <li>Klarnette dizi yazılı notalarla çalınır; Sol klarnetle bolahenkte duyulur.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: TDV İslâm Ansiklopedisi, makam maddeleri; Can (2002).</p></aside>
+</section>
+
+<section class="slide" data-chapter="7" data-demo="romanmakam" id="roman-makamlari">
+  <div class="text">
+    <h2>Roman havalarında makam</h2>
+    <p class="lead">Roman müzisyenler Türkiye'deki klarnet geleneğinin önemli bir parçasıdır; düğünlerde, oyun havalarında ve sahnede.</p>
+    <p>Hangi makamların ne sıklıkta çalındığına dair elimizdeki sayısal bilgi tek bir saha çalışmasından geliyor: Malatya'da Roman müzisyenlerle yapılan araştırma, repertuvarda <strong>hicaz</strong>, <strong>nikriz</strong> ve <strong>uşşak</strong>ın öne çıktığını gösteriyor. Trakya ve Ege için benzer sayısal bir çalışma bulamadık; bu yüzden genelleme yapmıyoruz.</p>
+    <p>Aynı çalışma, müzisyenlerin düğünlerde oyun havalarının yanında sanat müziği eserlerini de çaldığını anlatıyor.</p>
+    <p class="try">Hicaz ve uşşak dizilerini art arda dinleyin ve klarnetteki parmak farkını izleyin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Kılınçer ve Mustan Dönmez (2013): Malatya'daki Roman müzisyenlerin repertuvarında hicaz, nikriz ve uşşak sık geçer; düğünlerde hem oyun havası hem sanat müziği çalınır.</li>
+    <li>Nikriz dizisini burada göstermiyoruz: tanımını iki bağımsız kaynakla karşılaştıramadık.</li>
+    <li>Aykent'e (2020) göre 2+2+2+3'lük 9/8'in yaygınlaşmasında Trakya'daki Roman müzisyenlerin payı büyüktür (8. bölüm).</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Kılınçer ve Mustan Dönmez (2013), <a href="https://dergipark.org.tr/tr/download/article-file/255448">DergiPark</a>; Aykent (2020), Erdem 79.</p></aside>
+</section>
+
+<!-- ================= 8. USULLER ================= -->
+<section class="slide" data-chapter="8" data-demo="usulnedir" id="usul-nedir">
+  <div class="text">
+    <h2>Düm ve tek</h2>
+    <p class="lead">Türk müziğinde ritim <strong>usul</strong>lerle tutulur. Bir usul, ağırlıklı <strong>düm</strong> ve hafif <strong>tek</strong> vuruşlarından kurulan ve eser boyunca tekrarlanan bir kalıptır.</p>
+    <p>Darbukada düm derinin ortasına vurulan pes ve dolgun sestir; tek kenara vurulan tiz ve kuru ses. "Te", "ke", "kâ" gibi heceler hafif tekleri anlatır. Usulü öğrenmenin yolu, heceleri söyleyerek dizlere vurmaktır: düm için sağ el, tek için sol el.</p>
+    <p>İki kısa usulle başlayalım: dört zamanlı <strong>sofyan</strong> (düm–te–ke) ve iki zamanlı nim sofyan (düm–tek).</p>
+    <p class="try">Usul halkası bir plak gibi döner: çalan dilim parlar. Boşluk tuşu usulü başlatıp durdurur.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Sofyan 4/4: düm (2 zaman), te (1), ke (1). Nim sofyan 2/4: düm, tek (neyzenim.com usul tablosu; TDV).</li>
+    <li>Usul halkası, müzik eğitimindeki aksak ritim çemberinin plak biçimli hâli: <a href="https://egitim.koraytoksoz.com/muzik/#aksak">egitim.koraytoksoz.com/muzik</a>.</li>
+    <li>Davul sesleri sentezdir; kayıt değildir.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: neyzenim.com usul tablosu; TDV İslâm Ansiklopedisi, "Usul", "Sofyan".</p></aside>
+</section>
+
+<section class="slide" data-chapter="8" data-demo="metronom" id="metronom">
+  <div class="text">
+    <h2>Usul metronomu</h2>
+    <p class="lead">Günlük çalışma için bir metronom: usulü seçin, hızı ayarlayın, darbuka, def ya da yalın tık sesiyle çalın.</p>
+    <p>"Dizi çal" seçeneği usulün üstüne bir makam dizisini çıkıp inerek çalar; böylece dizi çalışırken usulü de bedeninize yerleştirirsiniz. <span class="dogrula">doğrulanmalı</span> işaretli usuller için güvenilir bir düm-tek dizilimi bulamadık; onlarda yalnızca vurgu grupları çalar.</p>
+    <p class="try">Bir usul seçin ve Boşluk tuşuyla başlatın. Hızı yavaş başlatıp her gün biraz artırın.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Zamanlama Web Audio saatiyle yapılır: vuruşlar 120 ms önceden planlanır, böylece sekme yavaşlasa bile kaymaz.</li>
+    <li>Usul kaynakları: aksak, sofyan, nim sofyan, aksak semâî ve devr-i hindî neyzenim.com tablosu ve TDV'den. Aksak semâî için Aykent 2+3+2+3 grubunu veriyor; burada neyzenim ve TDV'deki 3+2+2+3'ü kullandık.</li>
+    <li>Brief'te 2/4 olarak geçen çiftetelli için kaynaklar 8/4 ya da 4/4 diyor; düm-tek dizilimini veren güvenilir bir yazılı kaynak bulamadık. Bu yüzden yalnızca 3+3+2 vurgu grupları çalınıyor ve "doğrulanmalı" işareti var.</li>
+    <li>Sirto, TDV'ye göre nim sofyan ile çalınır.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: neyzenim.com usul tablosu; TDV İslâm Ansiklopedisi; Aykent (2020), Erdem 79.</p></aside>
+</section>
+
+<section class="slide" data-chapter="8" data-demo="dokuzsekiz" id="dokuz-sekiz">
+  <div class="text">
+    <h2>Dokuz sekizlik</h2>
+    <p class="lead">Türk müziğinin en tanınan ritmi 9/8'liktir. Dokuz sekizlik dört gruba ayrılır: 2 + 2 + 2 + 3. Son grup bir sekizlik uzundur; ritim bu yüzden "aksar".</p>
+    <p><strong>Aksak</strong> usul, <strong>Roman havası</strong> ve <strong>karşılama</strong> bu aynı iskeleti kullanır. Aralarındaki fark tempoda, vurgunun nereye düştüğünde ve oynanan oyundadır. Aykent'e göre bu 2+2+2+3 iskeletinin yaygınlaşmasında Trakya'daki Roman müzisyenlerin payı büyüktür.</p>
+    <p>Aynı dokuz sekizliği 2 + 3 + 2 + 2 diye gruplarsanız bambaşka bir ritim duyarsınız: raks aksağı.</p>
+    <p class="try">Grupları değiştirin: 2+2+2+3 ile 2+3+2+2 arasındaki farkı ayağınızla vurarak hissedin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Aksak 9/8: düm (2) te (1) ke (1) düm (2) tek (2) tek (1) (neyzenim.com; TDV).</li>
+    <li>Roman havası ve karşılamanın 2+2+2+3 kullanması ve Trakya'daki yaygınlaşma: Aykent 2020. "Roman ritmi" adı: Duygulu 2006. Karşılama bir oyun türüdür: Çolakoğlu 1984.</li>
+    <li>Darbukacıların Roman havasında çaldığı çalımlar burada gösterdiğimiz yalın kalıptan çok daha zengindir; bu çalımlar için akademik bir kaynak bulamadık.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Aykent (2020), Erdem 79; Duygulu (2006); Çolakoğlu (1984); neyzenim.com usul tablosu.</p></aside>
+</section>
+
+<section class="slide" data-chapter="8" data-demo="romanhavasi" id="roman-havasi">
+  <div class="text">
+    <h2>Bir oyun havası</h2>
+    <p class="lead">Hicaz makamında, 9/8'lik kısa bir oyun havası cümlesi. Bu site için yazıldı; klarnet ve darbuka sentezle çalıyor.</p>
+    <p>Klarnet cümleyi iki kez çalar, sonra darbuka tek başına devam eder: sıra sizde. Klarnetinizi alıp cümleyi usulün üstüne çalın ya da klarnet çiziminde ağızlığı basılı tutarak deneyin. Hızı düşürüp her notanın hangi düm ve teke denk geldiğine bakın.</p>
+    <p class="try">Hızı düşürün ve "Çal"a basın. Cümle bitince darbuka sürer; siz devam edin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Cümle: Dügâh'tan Nevâ'ya çıkıp hicaz dörtlüsünde dolaşan ve Dügâh'ta karar veren, sekiz ölçülük bir ezgi. Telif sorunu olmasın diye bu site için yazıldı.</li>
+    <li>Usul: aksak usulün düm-tek dizilimi (2+2+2+3).</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Aykent (2020); TDV İslâm Ansiklopedisi, "Hicaz".</p></aside>
+</section>
+
+<!-- ================= 9. BİR ŞARKI: GAMZEDEYİM ================= -->
+<section class="slide" data-chapter="9" data-demo="gamze" id="gamzedeyim">
+  <div class="text">
+    <h2>Gamzedeyim Devâ Bulmam</h2>
+    <p class="lead">Kemanî <strong>Tatyos</strong> Efendi'nin (1858–1913) uşşak makamında, sofyan usulündeki şarkısı.</p>
+    <p>Tatyos Efendi İstanbul Ortaköy'de doğdu, keman virtüözlüğü ve şarkılarıyla tanındı. Ölümünün üzerinden 70 yıldan fazla geçtiği için bestesi 1984'ten beri kamu malıdır.</p>
+    <p>Şarkı bir aranağmeyle başlar; ardından iki dize gelir ve her dize tekrarlanır. Ezgi Dügâh'ta karar verir, Nevâ'ya yaslanır, segâhtan Dügâh'a iner: uşşakın bütün rolleri burada.</p>
+    <p class="sozler"><em>Gamzedeyim devâ bulmam<br>Garibim bir yuva bulmam<br>Kaderimdir hep çektiren<br>İnlerim hiç rehâ bulmam</em></p>
+    <p class="try">"Dinle"ye basın: nota satırı ve perde ızgarası şarkıyla birlikte akar, def sofyanı tutar.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Tatyos Efendi: 1858 Ortaköy – 16 Mart 1913. Güftenin de ona ait olduğu kabul edilir (Ahmet Rasim'e dayanan bilgi); bu kesin değildir.</li>
+    <li>Telif: FSEK md. 27'ye göre eser sahibinin ölümünden itibaren 70 yıl; süre ölümü izleyen yılın başından işler. Beste 1 Ocak 1984'ten beri kamu malıdır.</li>
+    <li>Nota verisi SymbTr derlemesinden dönüştürüldü (Karaosmanoğlu 2012). SymbTr'nin kodlaması CC BY-NC-SA 4.0 lisanslıdır; bu yüzden şarkının veri dosyası sitenin geri kalanından farklı lisanslı (README ve LICENSE). SymbTr'deki ikinci geçişin son dizesinde bir hece hatası var; yalnızca ilk geçişi kullandık.</li>
+    <li>SymbTr uşşaktaki segâhı çoğu yerde AEU'nunkinden bir koma pest yazar (Rast'tan 16 koma). Bu, Şahinoğlu'nun "uşşakta segâh daha pest" gözlemiyle uyumlu.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: TDV İslâm Ansiklopedisi, "Tatyos Efendi", <a href="https://islamansiklopedisi.org.tr/tatyos-efendi">islamansiklopedisi.org.tr</a>; Vikipedi, "Tatyos Efendi"; Karaosmanoğlu, "A Turkish Makam Music Symbolic Database for Music Information Retrieval: SymbTr", ISMIR 2012, <a href="https://github.com/MTG/SymbTr">github.com/MTG/SymbTr</a>; 5846 sayılı Fikir ve Sanat Eserleri Kanunu, md. 27.</p></aside>
+</section>
+
+<section class="slide" data-chapter="9" data-demo="gamzeogren" id="gamzedeyim-ogren">
+  <div class="text">
+    <h2>Cümle cümle öğren</h2>
+    <p class="lead">Şarkıyı dizeler hâlinde, nota nota öğrenin. Sıradaki notanın parmak pozisyonu klarnet çiziminde yanar.</p>
+    <p>Mikrofonu açarsanız site sizi dinler: doğru perdeyi kısa bir süre tuttuğunuzda sonraki notaya geçer. Aynı nota art arda geliyorsa yeni bir dil vuruşu bekler. Mikrofon yoksa çizimdeki doğru delikleri kapatıp ağızlığa dokunarak ilerleyin.</p>
+    <p>Segâh notasında (Si koma bemol) Si pozisyonunu alıp sesi dudakla biraz pesleştirin; alet bu notada eşit tamperamanlı Si'yi kabul etmez. Tolerans ayarı ne kadar hassas dinleneceğini belirler.</p>
+    <p class="try">Bir dize seçin, önce "Dinle" ile siteden duyun, sonra "Başla" ile kendiniz çalın.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Geçiş kuralı: ölçülen perde hedefin tolerans aralığında (varsayılan ±30 cent) yaklaşık 200 ms kesintisiz kalırsa nota doğru sayılır. Aynı perde art arda geliyorsa önce sesin kesilmesi (düzeyin düşmesi) beklenir.</li>
+    <li>Hedef frekanslar seçilen ahenk ve klarnet türüne göre hesaplanır (varsayılan: Sol klarnet, bolahenk, La4 = 440 Hz).</li>
+    <li>Basitleştirilmiş sürümde çarpmalar (süsleme notaları) çıkarılmıştır; tam sürümde kısa notalar olarak çalınır ama dinlemede atlanabilir.</li>
+    <li>İlerleme tarayıcıda saklanır (localStorage); hiçbir yere gönderilmez.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: SymbTr (Karaosmanoğlu 2012), CC BY-NC-SA 4.0; de Cheveigné ve Kawahara (2002).</p></aside>
+</section>
+
+<section class="slide" data-chapter="9" data-demo="gamzebirlikte" id="gamzedeyim-birlikte">
+  <div class="text">
+    <h2>Birlikte çal</h2>
+    <p class="lead">Şimdi şarkıyı usulün içinde çalın. Def sofyanı tutar; site ezgiyi sizinle birlikte çalabilir ya da susup size bırakabilir.</p>
+    <p>"Eksi bir" seçeneğinde klarnet susar, yalnızca def çalar. Mikrofon açıksa her notanın zamanında ve doğru perdede gelip gelmediği isabet şeridine işlenir: <span class="c-guclu">yeşil</span> doğru, <span class="c-koma">çivit</span> perde biraz kaymış, boş kalan notalar kaçmış.</p>
+    <p>Hızı yavaş başlatın. Şarkı tanıdık geldikçe hızı artırın; asıl hedef, segâhı ve Dügâh kararlarını kulağınızla oturtmak.</p>
+    <p class="try">Hızı ayarlayın ve "Başla"ya basın. Dört vuruşluk bir girişten sonra şarkı başlar.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>İsabet: notanın süresinin en az üçte birinde ölçülen perde hedefin ±35 cent içinde kalırsa doğru, ±70 cent içinde kalırsa "kaymış" sayılır.</li>
+    <li>En iyi sonuç her dize için tarayıcıda saklanır (klarnet.gamze.*).</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: SymbTr (Karaosmanoğlu 2012); neyzenim.com usul tablosu (sofyan).</p></aside>
+</section>
+
+<!-- ================= 10. SÜSLEMELER VE TAKSİM ================= -->
+<section class="slide" data-chapter="10" data-demo="susleme" id="susleme">
+  <div class="text">
+    <h2>Süslemeler</h2>
+    <p class="lead">Türk müziğinde nota kâğıdı ezginin iskeletidir. Klarnetçi onu süslemelerle canlandırır; çoğu notada yazılmaz, kulakla öğrenilir.</p>
+    <ul>
+      <li><strong>Çarpma</strong>: asıl notadan önce çok kısa çalınan bir yardımcı nota. Parmakla yapılır; küçük aralıklarda daha temiz duyulur.</li>
+      <li><strong>Glissando</strong>: bir perdeden ötekine kayarak geçmek. Dudakla, parmakları deliklerden yavaşça kaydırarak ya da ikisiyle birlikte yapılır.</li>
+      <li><strong>Vibrato</strong>: perdenin düzenli dalgalanması; dudak ve çeneyle yapılır.</li>
+      <li><strong>Tril</strong>: iki komşu perde arasında hızlı gidip gelme.</li>
+    </ul>
+    <p class="try">Her süslemeyi süslemeli ve süslemesiz dinleyin. Izgaradaki çizgi perdenin zaman içindeki yolunu gösterir.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Çarpma, glissando (dudak, parmak ya da ikisi), vibrato ve tril tanımları: Şahinoğlu 2022.</li>
+    <li>"Ağlama" ve "gırtlak" gibi klarnetçilerin kullandığı başka terimler için kaynaklı bir tanım bulamadık; bunları burada anlatmıyoruz.</li>
+    <li>MEB programı da süslemelerin üstatlar dinlenerek kazanıldığını yazar.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Şahinoğlu (2022), Yegah Müzikoloji Dergisi 5(2), 296–316; MEB GSL Klarnet Programı.</p></aside>
+</section>
+
+<section class="slide" data-chapter="10" data-demo="taksim" id="taksim">
+  <div class="text">
+    <h2>Taksim</h2>
+    <p class="lead"><strong>Taksim</strong>, bir çalgının usulsüz, serbest zamanlı olarak makamı doğaçlama gösterdiği bölümdür. Bir eserin öncesinde makamı hazırlar ya da iki eser arasında köprü kurar.</p>
+    <p>Taksim serbesttir ama keyfi değildir: makamın seyrini izler. Uşşak taksimi pes bölgede, Dügâh çevresinde başlar; uşşak dörtlüsünü gezer, Nevâ'ya çıkıp orada yarım karar verir, belki daha tize uzanır ve sonunda segâhtan Dügâh'a inip karar verir.</p>
+    <p>Klarnet taksimlerinde uzun sesler, glissandolar ve kısa süslü koşular iç içe geçer.</p>
+    <p class="try">Kısa bir uşşak taksimini dinleyin. Izgaradaki iz seyrin yolunu çiziyor: durak ve güçlü renkli.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Taksim tanımı: TDV İslâm Ansiklopedisi, "Taksim".</li>
+    <li>Örnek taksim bu site için yazıldı ve fiziksel modelle çalınıyor; bir icracının taksimi değildir. Uzun sesler, glissandolar ve vibrato klarnet taksiminin kaba bir taklididir.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: TDV İslâm Ansiklopedisi, "Taksim", "Uşşak".</p></aside>
+</section>
+
+<section class="slide" data-chapter="10" data-demo="taksimalani" id="taksim-alani">
+  <div class="text">
+    <h2>Taksim alanı</h2>
+    <p class="lead">Sıra sizde. Bir makam seçin ve taksim yapın: klarnet çiziminde ağızlığı basılı tutup delikleri değiştirerek ya da mikrofonla kendi klarnetinizle.</p>
+    <p>Rehber size seyrin adımlarını önerir: önce durağı tanıtın, sonra güçlüye çıkın, orada dinlenin, sonra durağa dönüp karar verin. Makam dışı bir perde çaldığınızda ızgarada nazikçe işaretlenir. Bu bir sınav değil; taksimde makam dışı perdeler de bilerek kullanılır.</p>
+    <p class="try">Bir makam seçin ve "Rehberi başlat"a basın.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Rehber adımları seyrin en kaba özetidir; gerçek taksimde geçkiler (başka makamlara geçişler) ve çeşniler vardır.</li>
+    <li>Makam dışı perde: çalınan perdenin dizideki en yakın perdeye uzaklığı 1,5 komadan fazlaysa işaretlenir.</li>
+  </ul>
+  <p class="kaynak">Kaynak: TDV İslâm Ansiklopedisi makam maddeleri.</p></aside>
+</section>
+
+<!-- ================= 11. BAKIM VE PRATİK ================= -->
+<section class="slide" data-chapter="11" data-demo="bakim" id="bakim">
+  <div class="text">
+    <h2>Bakım</h2>
+    <p class="lead">Ahşap bir klarnetin en büyük düşmanı ani sıcaklık değişimi ve nemdir. Soğuk bir gövdeye sıcak nefes vermek ahşabın içini dışından hızlı ısıtır ve gövdede çatlak riskini artırır.</p>
+    <p>Soğuktan geldiyseniz klarneti kutusunda oda sıcaklığına alıştırın, gerekirse gövdeyi avuçlarınızla ısıtın. Çaldıktan sonra içindeki nemi sürgü beziyle alın, kamışı ağızlıktan çıkarıp kurumaya bırakın. Mantarları ara sıra yağlayın, anahtarları parmak izinden arındırın.</p>
+    <p>Uzun süre çalınmayacaksa klarneti nemden ve güneşten uzak, kutusunda saklayın.</p>
+    <p class="try">Çaldıktan sonraki adımları doğru sıraya dizin.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Ahşap klarnetlerde çatlama ve sıcaklık: Wikipedia, "Clarinet" (Construction: grenadilla gövdelerin çatlama eğilimi). Plastik ya da ebonit gövdeli klarnetler bu açıdan daha dayanıklıdır.</li>
+    <li>Adımlar çoğu bakım kılavuzunda ortaktır; ayrıntılar (yağ türü, sürgü bezi) üreticiye göre değişir.</li>
+  </ul>
+  <p class="kaynak">Kaynaklar: Wikipedia, "Clarinet"; MEB GSL Klarnet Programı (çalgı bakımı kazanımları).</p></aside>
+</section>
+
+<section class="slide" data-chapter="11" data-demo="pratik" id="pratik">
+  <div class="text">
+    <h2>Günlük pratik</h2>
+    <p class="lead">Az ve her gün, çok ve ara sıradan iyidir. Kısa bir planla başlayın: uzun sesler, bir dizi, bir usul, bir ezgi.</p>
+    <p>Süreyi seçin; plan adımlara bölünür ve zamanlayıcı her adımı sırayla açar. Adımlardaki bağlantılar sizi ilgili çalışma aracına götürür: uzun ses grafiği, usul metronomu, makam kartları, şarkı.</p>
+    <p>Çalıştığınız makamlar ve usuller bu tarayıcıda saklanır; ertesi gün nerede kaldığınızı görürsünüz.</p>
+    <p class="try">15 dakikalık planı seçin ve zamanlayıcıyı başlatın.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Planlar öneridir, bir öğretmenin vereceği programın yerini tutmaz.</li>
+    <li>Kayıtlar tarayıcının localStorage alanında "klarnet." önekiyle tutulur; hiçbir yere gönderilmez ve "Kayıtları sil" düğmesiyle silinir.</li>
+  </ul>
+  <p class="kaynak">Kaynak: MEB GSL Klarnet Programı (günlük çalışma alışkanlığı kazanımları).</p></aside>
+</section>
+
+<section class="slide" data-chapter="11" data-demo="kapanis" id="kapanis">
+  <div class="text">
+    <h2>Nefesten taksime</h2>
+    <p class="lead">Bir kamışın titreşiminden başladık; koma perdelerinden, makamlardan ve usullerden geçip bir şarkıya ve taksime vardık.</p>
+    <p>Klarnet kulakla öğrenilen bir çalgıdır. Bu site size araçlar verebilir, ama asıl öğretmen ustaların kayıtları ve sizi dinleyen bir öğretmendir. Ustaları dinleyin, taklit edin, sonra kendi sesinizi arayın.</p>
+    <p>Çalışma araçlarına buradan dönebilirsiniz.</p>
+    <div class="cover-meta">
+      <a class="all-link" href="https://egitim.koraytoksoz.com/">← Bütün eğitimler</a>
+      <a class="gh-link" href="https://github.com/ktoksoz/nefesten-taksime" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Kaynak kodu GitHub'da</span></a>
+      <a class="lic" href="https://creativecommons.org/licenses/by/4.0/deed.tr" target="_blank" rel="license noopener" title="İçerik: Creative Commons Atıf 4.0">
+        <img src="img/cc-cc.svg" alt="Creative Commons" width="20" height="20"><img src="img/cc-by.svg" alt="Atıf" width="20" height="20">
+        <span>İçerik CC BY 4.0 · Kod MIT · Şarkı verisi CC BY-NC-SA 4.0</span>
+      </a>
+    </div>
+    <p class="license">Copyright © 2026 Koray Toksöz. Ses fiziksel modelle sentezlenir; sitede kayıt yoktur.</p>
+  </div>
+  <div class="stage"></div>
+  <aside class="notes"><ul>
+    <li>Diğer eğitimler: Titreşimden Şarkıya (müzik teorisi), egitim.koraytoksoz.com/muzik.</li>
+    <li>Gerçek bir klarnetle denenmesi ve bir klarnetçi tarafından denetlenmesi gereken konuların listesi README dosyasında.</li>
+  </ul>
+  <p class="kaynak">Kaynakların tam listesi: README.md (GitHub).</p></aside>
+</section>
+
+</main>
+
+<aside id="notes" aria-live="polite"></aside>
+<div id="overview" role="dialog" aria-label="Tüm slaytlar"></div>
+
+<nav id="bar" aria-label="Slayt gezinmesi">
+  <div class="chapter-name"></div>
+  <button class="iconbtn" id="btn-prev" aria-label="Önceki slayt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <div id="progress"></div>
+  <button class="iconbtn" id="btn-next" aria-label="Sonraki slayt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+  <span class="counter"></span>
+  <span class="volume">
+    <button class="iconbtn" id="btn-mute" aria-label="Sesi kapat (M)" title="Sesi kapat (M)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4h4l5 4V6L8 10z" fill="currentColor" stroke="none"/><path class="w" d="M16.5 8.5a5 5 0 0 1 0 7"/><path class="x" d="M17 9l5 6M22 9l-5 6"/></svg></button>
+    <input type="range" id="vol" min="0" max="1" step="0.01" value="0.7" aria-label="Ses düzeyi">
+  </span>
+  <button class="iconbtn" id="btn-voice" aria-label="Sesli anlatım (A)" title="Sesli anlatım (A)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20c.8-3.6 3.4-5.6 6.5-5.6s5.7 2 6.5 5.6"/><path d="M18.5 4.5a5 5 0 0 1 0 7"/></svg></button>
+  <button class="iconbtn" id="btn-text" aria-label="Açıklama metnini gizle (T)" title="Metni gizle (T)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h10M4 10h10M4 14h7M18 5v14"/></svg></button>
+  <button class="iconbtn" id="btn-notes" aria-label="Sunucu notları (N)" title="Sunucu notları (N)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h9l3 3v15H6z"/><path d="M9 11h6M9 15h6"/></svg></button>
+  <button class="iconbtn" id="btn-overview" aria-label="Tüm slaytlar (O)" title="Tüm slaytlar (O)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg></button>
+</nav>
+
+<script src="js/klarnet.js?v=202610181200"></script>
+<script src="js/yin.js?v=202610181200"></script>
+<script src="js/lib.js?v=202610181200"></script>
+<script src="js/audio.js?v=202610181200"></script>
+<script src="js/data/parmaklar.js?v=202610181200"></script>
+<script src="js/data/makamlar.js?v=202610181200"></script>
+<script src="js/data/usuller.js?v=202610181200"></script>
+<script src="js/data/sarki-gamzedeyim.js?v=202610181200"></script>
+<script src="js/data/nefes-harita.js?v=202610181200"></script>
+<script src="js/ses/klarnet-ses.js?v=202610181200"></script>
+<script src="js/isaret.js?v=202610181200"></script>
+<script src="js/cizim.js?v=202610181200"></script>
+<script src="js/perde.js?v=202610181200"></script>
+<script src="js/usul.js?v=202610181200"></script>
+<script src="js/klarnet-ciz.js?v=202610181200"></script>
+<script src="js/demos/b0-giris.js?v=202610181200"></script>
+<script src="js/demos/b1-tarih.js?v=202610181200"></script>
+<script src="js/demos/b2-fizik.js?v=202610181200"></script>
+<script src="js/demos/b3-calgi.js?v=202610181200"></script>
+<script src="js/demos/b4-ilkses.js?v=202610181200"></script>
+<script src="js/demos/b5-parmak.js?v=202610181200"></script>
+<script src="js/demos/b6-perde.js?v=202610181200"></script>
+<script src="js/demos/b7-makam.js?v=202610181200"></script>
+<script src="js/demos/b8-usul.js?v=202610181200"></script>
+<script src="js/demos/b9-gamze.js?v=202610181200"></script>
+<script src="js/demos/b10-taksim.js?v=202610181200"></script>
+<script src="js/demos/b11-pratik.js?v=202610181200"></script>
+<script src="js/glossary.js?v=202610181200"></script>
+<script src="js/app.js?v=202610181200"></script>
+<script src="js/narrator.js?v=202610181200"></script>
+<script src="js/guide.js?v=202610181200"></script>
+</body>
+</html>

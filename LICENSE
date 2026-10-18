@@ -1,0 +1,91 @@
+Nefesten Taksime — https://egitim.koraytoksoz.com/klarnet/
+Copyright (c) 2026 Koray Toksöz
+
+Bu proje iki ayrı lisansla dağıtılır; bir veri dosyası üçüncü bir lisansa tabidir:
+
+  1. KAYNAK KOD (MIT Lisansı)
+     js/, css/, tools/, test/ klasörlerindeki ve index.html içindeki kod.
+
+  2. İÇERİK (Creative Commons Atıf 4.0 Uluslararası, CC BY 4.0)
+     Slayt metinleri, açıklamalar, sunucu notları, sözlük tanımları,
+     anlatım metinleri (tools/narration.json) ve anlatım sesleri (audio/).
+
+  3. ŞARKI VERİSİ (CC BY-NC-SA 4.0) — yalnızca js/data/sarki-gamzedeyim.js
+     Aşağıdaki "Üçüncü taraf bileşenler" bölümüne bakın.
+
+-------------------------------------------------------------------------------
+1. MIT Lisansı (kaynak kod)
+-------------------------------------------------------------------------------
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+2. Creative Commons Atıf 4.0 Uluslararası (içerik)
+-------------------------------------------------------------------------------
+
+İçeriği kopyalayabilir, dağıtabilir, çevirebilir, uyarlayabilir ve ticari
+amaçla dahil olmak üzere her amaçla kullanabilirsiniz. Şartlar:
+
+  - Atıf: "Koray Toksöz, Nefesten Taksime, https://egitim.koraytoksoz.com/klarnet/"
+    şeklinde ad ve bağlantı verin.
+  - Lisansa bağlantı verin.
+  - Değişiklik yaptıysanız bunu belirtin.
+
+Lisans metninin tamamı:
+  https://creativecommons.org/licenses/by/4.0/legalcode.tr
+  https://creativecommons.org/licenses/by/4.0/legalcode
+
+-------------------------------------------------------------------------------
+3. Üçüncü taraf bileşenler
+-------------------------------------------------------------------------------
+
+Şarkı verisi (js/data/sarki-gamzedeyim.js):
+  "Gamzedeyim Devâ Bulmam" — beste ve güfte: Kemanî Tatyos Efendi (1858–1913).
+  Eser kamu malıdır (5846 sayılı FSEK md. 27).
+  Nota kodlaması SymbTr derlemesinden dönüştürülmüştür:
+    M. K. Karaosmanoğlu, "A Turkish Makam Music Symbolic Database for Music
+    Information Retrieval: SymbTr", ISMIR 2012. https://github.com/MTG/SymbTr
+  SymbTr, Creative Commons Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası
+  (CC BY-NC-SA 4.0) lisanslıdır. Bu nedenle js/data/sarki-gamzedeyim.js dosyası
+  ve ondan türetilen veriler aynı lisansla paylaşılır: ticari amaçla
+  kullanılamaz, türevleri aynı lisansla paylaşılmalıdır.
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Parmak pozisyonları (js/data/parmaklar.js):
+  The Woodwind Fingering Guide (T. Reichard; Albert/Oehler tabloları: Eoin
+  McAuley, Arnold Wendl) kaynak alınarak yazılmış, bu sitenin kendi veri
+  biçimine dönüştürülmüş olgusal bilgilerdir. https://www.wfg.woodwind.org/
+
+Sesler:
+  Sitedeki bütün çalgı sesleri (klarnet, darbuka, def) tarayıcıda Web Audio
+  API ile anlık olarak sentezlenir. Klarnet sesi js/ses/klarnet-dsp.js içindeki
+  dalga kılavuzu modelinden gelir. Projede hiçbir kayıt ya da örnek ses
+  (sample) yoktur.
+
+Anlatım sesleri (audio/):
+  ElevenLabs ücretli abonelikle "İrem" sesiyle üretildi, CC BY 4.0 kapsamında
+  paylaşılır. Sesler bir kişiyi taklit etmek ya da yanıltıcı amaçla
+  kullanılamaz.
+
+Creative Commons simgeleri (img/cc-cc.svg, img/cc-by.svg):
+  Creative Commons basın setinden (https://mirrors.creativecommons.org/presskit/).
+
+Fontlar (Google Fonts üzerinden yüklenir, projede kopyası yoktur):
+  Gloock — SIL Open Font License 1.1
+  Commissioner — SIL Open Font License 1.1
