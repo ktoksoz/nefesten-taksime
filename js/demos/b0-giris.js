@@ -61,7 +61,7 @@
     const dinle = h("button.btn.kapak-dinle", { type: "button" }, "▶ Dinle");
     stage.append(dinle);
     const PER = K.PERDELER.filter((p) => p.koma >= 0 && p.koma < 53 && K.anaMi(p));
-    const ADLI = new Set(["Rast", "Dügâh", "Segâh", "Çârgâh", "Nevâ", "Hüseynî", "Acem", "Eviç", "Kürdî", "Bûselik", "Zirgüle", "Hisar"]);
+    const ADLI = new Set(["Rast", "Dügâh", "Segâh", "Çârgâh", "Nevâ", "Hüseynî", "Acem", "Eviç", "Bûselik", "Zirgüle", "Hisar"]);
     let st, aci = 0, isik = null, isikT = 0, hover = null, calan = null;
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
